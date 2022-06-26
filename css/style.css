@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  /* height: 95vh; */
+  color: #455A64;
+  background-color: #009688;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 2rem auto;
+  min-height: 100%;
+}
+
+.Wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.code1 {
+  width: 45%;
+  height: 80vh;
+  margin-right: 5px;
+}
+
+.code2 {
+  width: 45%;
+  height: 80vh;
+  margin-left: 5px;
+}
+
+.btnReverse {
+  width: 10%;
+  height: 80vh;
+  position: relative;
+}
+
+
+.Title {
+  margin-bottom: 20px;
+  padding: 0;
+  color: #fff;
+  font-size: 4.1rem !important;
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.copyright
+{
+  /* font-size: 20px; */
+  color: #fff;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 15px;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 44%;
+}
+
+.CodeMirror {
+  height: 80vh !important;
+}
+
+textarea{
+  position: absolute;
+  top: -100%;
+}
+
+/* CSS */
+.button-32 {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  width: 100%;
+  transition: 200ms;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  margin: 0;
+  position: absolute;
+  top: 35%;
+
+}
+
+.button-32:not(:disabled):hover,
+.button-32:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.button-32:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
