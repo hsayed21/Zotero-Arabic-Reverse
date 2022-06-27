@@ -36,13 +36,21 @@ $(document).ready(function () {
     //   OutResult += textR + '\n';
     // });
     for (let index = 0; index < clearResult.length; index++) {
-      const str = clearResult[index];
-      var textR = str.trim().split('').reverse().join('');
+      var strLine = clearResult[index];
+      // Detect arabic chars
+      var matches = strLine.match(
+        /[\u0600-\u06ff\u0750-\u077f\ufb50-\ufbc1\ufbd3-\ufd3f\ufd50-\ufd8f\ufd50-\ufd8f\ufe70-\ufefc\uFDF0-\uFDFD]+/g
+      );
+      matches.forEach((element) => {
+        var textR = element.trim().split('').reverse().join('');
+        strLine = strLine.replace(element, textR);
+      });
+
       if (index == clearResult.length - 1) {
         // last element
-        OutResult += textR;
+        OutResult += strLine;
       } else {
-        OutResult += textR + '\n';
+        OutResult += strLine + '\n';
       }
     }
     result.setValue(OutResult);
